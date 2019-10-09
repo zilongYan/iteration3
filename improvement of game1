@@ -1,3 +1,206 @@
+<?php /* Template Name: Game1-1 */ ?>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <body>
+        <div id="video_container">
+            <video id="warning" autoplay loop playsinline>
+                <source id="warningvideo" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/warning.mp4#t=2,2.1" type=video/mp4>
+            </video>
+            <video id="game1" autoplay loop playsinline>
+                <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/game1-first.mp4" type=video/mp4>
+            </video>
+            <div id="audio_container"><audio id="audio1" autoplay="autoplay"><source src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/After_School_Jamboree.mp3" type="audio/mpeg" /></audio></div>
+            <button id='playGame'>
+            </button>
+            <button id='girl'>
+            </button>
+            <button id='boy'>
+            </button>
+            <button id='exit'>
+            </button>
+            <button id='continue'>
+            </button>
+            
+                 <div>
+            <button id="go_home"><span><i  class="fa fa-home" aria-hidden="true" ></i></span></button>
+        </div>
+                <button id='volume'>
+                    <span><i id="off" class="fa fa-volume-up" aria-hidden="true" ></i></span>
+                </button>
+            
+        </div>
+        <script>
+            var playGame = document.getElementById('playGame');
+            var source = document.getElementById('mp4video');
+            var video = document.getElementById('game1');
+            var music =document.getElementById('audio1');
+            var idPlaying = false;
+            playGame.addEventListener('click',function(e){
+                source.setAttribute('src',"http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/game1-loading.mp4");
+                var video =document.getElementById('game1');
+                video.load();
+                video.play();
+                playGame.style.display = 'none';
+                video.loop = false;
+                video.onended = function(){
+                    source.setAttribute('src',"http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/game1-choose-character.mp4");
+                    video.autoplay = true;
+                    video.loop =true;
+                    video.load();
+                    video.play();
+                    document.getElementById('girl').style.display='block';
+                    document.getElementById('boy').style.display='block';
+                }
+            },false);
+            document.getElementById('girl').addEventListener('click',function(e){
+                    window.location.href = 'http://www.savetheyouth-iteration3.tk/game-01/';
+            },false)
+            document.getElementById('exit').addEventListener('click',function(e){
+                    window.location.href = 'http://www.savetheyouth-iteration3.tk/games/';
+            },false)
+            document.getElementById('continue').addEventListener('click',function(e){
+                    document.getElementById('warning').style.display = 'none';
+                    document.getElementById('girl').style.display = 'none';
+                    document.getElementById('exit').style.display = 'none';
+                    video.style.display ='block';
+            },false)
+            document.getElementById('go_home').addEventListener('click',function(e){
+                    window.location.href = 'http://www.savetheyouth-iteration3.tk/games/';
+            },false)
+            music.volume = 0.4;
+            document.getElementById('volume').addEventListener('click',function(e){
+                if(isPlaying){
+                    music.pause();
+                    document.getElementById('off').setAttribute('class',"fa fa-volume-off");
+                }
+                else{
+                    music.play();
+                    document.getElementById('off').setAttribute('class',"fa fa-volume-up");
+                }
+//                if(!playmusic){
+//                    music.play();
+//                    playmusic =true;
+//                    document.getElementById('off').setAttribute('class',"fas fa-volume-mute");
+//                }
+                
+                
+            },false)
+            music.onplaying =function(){
+                isPlaying = true;
+            }
+            music.onpause =function(){
+                isPlaying = false;
+            }
+        </script>
+    </body>
+    <style>
+        html,i{
+            display: inline-block;
+        }
+        #go_home{
+            position: absolute;
+            top:5%;
+            left: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+        }
+        #volume{
+            position: absolute;
+            top:5%;
+            right: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+        }
+        button{
+			cursor: pointer;
+            border: none;
+		}
+		button:hover{
+				cursor: pointer;
+		}
+		html,body{
+			display: flex;
+  		justify-content: center;
+  		align-items: center;
+			background-image: url('http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/rehan-mallick-5J1bHRX1fNw-unsplash.jpg');
+		}
+        #game1{
+            display: none;
+            width: 100%;
+        }
+        #warning{
+            width: 100%;
+        }
+        #video_container{
+            position: relative;
+        }
+        #playGame{
+            position: absolute;
+            right: 3%;
+            bottom: 5%;
+            width: 250px;
+            height: 150px;
+            background-color: transparent;
+            border: none;
+            
+        }
+        
+        #girl{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            bottom: 2%;
+            left:25%;
+            background-color: transparent;
+            border: none;
+            display: none;
+
+            
+        }
+        #boy{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            bottom: 2%;
+            right:25%;
+            background-color: transparent;
+            border: none;
+            display: none;
+        }
+        #exit{
+            position: absolute;
+            height: 80px;
+            width: 160px;
+            bottom: 5%;
+            left:12%;
+            background-color: transparent;
+            border: none;
+        }
+        #continue{
+            position: absolute;
+            height: 80px;
+            width: 160px;
+            bottom:5%;
+            right:12%;
+            background-color: transparent;
+            border: none;
+        }
+    </style>
+</html>
 <?php /* Template Name: Game1 */ ?>
 <html>
     <head>
