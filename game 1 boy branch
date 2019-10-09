@@ -1,0 +1,556 @@
+<?php /* Template Name: Game1-2 */ ?>
+<html>
+    <head>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="video_container">
+            
+            <div id="audio_container"><audio id="audio1" autoplay="autoplay"><source src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/After_School_Jamboree.mp3" type="audio/mpeg" /></audio></div>
+            
+            <video id="morning1" playsinline autoplay>
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-morning-1.mp4" type=video/mp4>
+            </video>
+            <video id="sit1" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-sit1.mp4" type=video/mp4>
+            </video>
+            
+            
+            <video id="sit2" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-sit2.mp4" type=video/mp4>
+            </video>
+            <video id="sit3" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-sit3.mp4" type=video/mp4>
+            </video>
+            <video id="sit4" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-sit4.mp4" type=video/mp4>
+            </video>
+            <video id="morning2" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-morning-2.mp4" type=video/mp4>
+            </video>
+            <video id="morning3" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-morning-3.mp4" type=video/mp4>
+            </video>
+            <video id="morning4" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-morning-4.mp4" type=video/mp4>
+            </video>
+            <video id="morning5" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-morning-5.mp4" type=video/mp4>
+            </video>
+            <video id="morning6" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-morning-6.mp4" type=video/mp4>
+            </video>
+            <video id="laugh1" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-laugh-1.mp4" type=video/mp4>
+            </video>
+            <video id="laugh2" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-laugh-2.mp4" type=video/mp4>
+            </video>
+            <video id="laugh3" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-laugh-3.mp4" type=video/mp4>
+            </video>
+            <video id="help1" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-help-1.mp4" type=video/mp4>
+            </video>
+            <video id="help2" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-help-2.mp4" type=video/mp4>
+            </video>
+            <video id="help3" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-help-3.mp4" type=video/mp4>
+            </video>
+            <video id="help4" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-help-4.mp4" type=video/mp4>
+            </video>
+           
+            <video id="goaway" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-go-away.mp4" type=video/mp4>
+            </video>
+            <video id="argue" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-argue.mp4" type=video/mp4>
+            </video>
+            <video id="ask1" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-ask-for-help-1.mp4" type=video/mp4>
+            </video>
+            <video id="ask2" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-ask-for-help-2.mp4" type=video/mp4>
+            </video>
+            <video id="ask3" playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/boy-ask-for-help-3.mp4" type=video/mp4>
+            </video>
+       
+              <div>
+            <button id="go_home"><span><i  class="fa fa-home" aria-hidden="true" ></i></span></button>
+        </div>
+                <button id='volume'>
+                    <span><i id="off" class="fa fa-volume-up" aria-hidden="true" ></i></span>
+                </button>
+            
+            <div id="button_layer">
+          <button id="skip"><span><i class="fa fa-arrow-right" ></i></span>Next</button>
+          <button id="replay"><span><i class="fa fa-undo" ></i></span> Replay</button>
+           
+            <div id="bus_selection_layer" style="display: none">
+            <button id="sit" onclick="videoSelector('sit2')"></button>
+            <button id="notsit" onclick="videoSelector('sit4')"></button>
+             </div>
+                
+                <button id="busReselect" style="display: none">
+                </button>
+                
+                <div id="first_selection_layer">
+            <button id="laugh"></button>
+            <button id="help"></button>
+            <button id="go"></button>
+                    <button id="laughReselect" style="display: none">
+                </button>
+                    <button id="goReselect" style="display: none">
+                </button>
+            <button id="arguehim" style="display: none"></button>
+            <button id="askhelp" style="display: none"></button>
+                     <button id="argueReselect" style="display: none">
+                </button>
+                    <button id="goHome" style="display: none">
+                    </button>
+        </div>
+
+        </div>
+            
+        </div>
+        <script>
+            var music =document.getElementById('audio1');
+            var isPlaying = false;
+            var nextVideo;
+            var currentVideo = 'morning1';
+            
+             document.getElementById('go_home').addEventListener('click',function(e){
+                    window.location.href = 'http://www.savetheyouth-iteration3.tk/games/';
+            },false)
+            music.volume = 0.2;
+            document.getElementById('volume').addEventListener('click',function(e){
+                if(isPlaying){
+                    music.pause();
+                    document.getElementById('off').setAttribute('class',"fa fa-volume-off");
+                }
+                else{
+                    music.play();
+                    document.getElementById('off').setAttribute('class',"fa fa-volume-up");
+                }
+            },false)
+            music.onplaying =function(){
+                isPlaying = true;
+            }
+            music.onpause =function(){
+                isPlaying = false;
+            }
+            
+            var skip = document.getElementById('skip');
+            skip.addEventListener('click',function(e){
+                var video = document.getElementsByTagName('video');
+                switch (currentVideo){
+                    case 'morning1':
+                        videoSelector('sit1')
+                        skip.style.display='none';
+                        document.getElementById('bus_selection_layer').style.display = 'block'; 
+                        currentVideo ='sit1';
+                        break;
+                    case 'sit2':
+                        videoSelector('sit3'); 
+                        break;
+                    case 'sit3':
+                        videoSelector('morning2');
+                        break;
+                    case 'sit4':
+                        videoSelector('sit1');
+                        break;
+                    case 'morning2':
+                        videoSelector('morning3');
+                        break;
+                    case 'morning3':
+                        videoSelector('morning4');
+                        break;
+                    case 'morning4':
+                        videoSelector('morning5');
+                        break;
+                    case 'laugh1':
+                        videoSelector('laugh2');
+                        break;
+                        case 'laugh2':
+                        videoSelector('laugh3');
+                        break;
+                         case 'help1':
+                        videoSelector('help2');
+                        break;
+                        case 'help2':
+                        videoSelector('help3');
+                        break;
+                    case 'ask1':
+                         videoSelector('ask2');
+                        break;
+                         case 'ask2':
+                         videoSelector('ask3');
+                        break;
+                        
+                        
+                    
+                    
+                }
+                
+                
+            },false);
+            var replay =document.getElementById('replay');
+            replay.addEventListener('click',function(e){
+                document.getElementById(currentVideo).pause();
+                document.getElementById(currentVideo).load();
+                document.getElementById(currentVideo).play();
+            },false)
+            
+           function videoSelector(targetVideo){
+               document.getElementById(currentVideo).pause();
+               if(!currentVideo=='morning1'){
+                    document.getElementById(currentVideo).load();
+               }
+               document.getElementById(currentVideo).style.display='none';
+               
+               document.getElementById(targetVideo).style.display='block';
+               document.getElementById(targetVideo).load();
+               document.getElementById(targetVideo).play();
+           }
+               
+            document.getElementById('sit2').onplay = function(){
+                skip.style.display='block';
+                document.getElementById('bus_selection_layer').style.display = 'none'; 
+                currentVideo = 'sit2';
+            }
+            document.getElementById('sit3').onplay = function(){
+                document.getElementById('bus_selection_layer').style.display = 'none'; 
+                currentVideo = 'sit3'; 
+            }
+            document.getElementById('sit4').onplay = function(){
+                document.getElementById('bus_selection_layer').style.display = 'none'; 
+                document.getElementById('busReselect').style.display = 'block';
+                currentVideo = 'sit4';
+            }
+            document.getElementById('busReselect').addEventListener('click',function(e){
+                document.getElementById('busReselect').style.display = 'none';
+                document.getElementById('bus_selection_layer').style.display = 'block'; 
+                videoSelector('sit1');
+                currentVideo = 'sit1'
+            },false)
+            
+            document.getElementById('morning2').onplay = function(){
+                currentVideo = 'morning2'; 
+            }
+             document.getElementById('morning3').onplay = function(){
+                currentVideo = 'morning3'; 
+            }
+             document.getElementById('morning4').onplay = function(){
+                currentVideo = 'morning4'; 
+            }
+             document.getElementById('morning5').onplay = function(){
+                 document.getElementById('laugh').style.display = 'block';
+                 document.getElementById('help').style.display = 'block';
+                 document.getElementById('go').style.display = 'block';
+                currentVideo = 'morning5'; 
+            }
+             document.getElementById('laugh').addEventListener('click',function(e){
+                 videoSelector('laugh1');
+                 currentVideo='laugh1';
+                  document.getElementById('laugh').style.display = 'none';
+                 document.getElementById('help').style.display = 'none';
+                 document.getElementById('go').style.display = 'none';
+             })
+            document.getElementById('laugh2').onplay = function(){
+                currentVideo = 'laugh2'; 
+            }
+             document.getElementById('laugh3').onplay = function(){
+                 document.getElementById('laughReselect').style.display = 'block';
+                 currentVideo = 'laugh3'; 
+            }
+             document.getElementById('help').addEventListener('click',function(e){
+                 document.getElementById('laugh').style.display = 'none';
+                 document.getElementById('help').style.display = 'none';
+                 document.getElementById('go').style.display = 'none';
+                 videoSelector('help1');
+                 currentVideo='help1';
+             })
+            
+            document.getElementById('help2').onplay = function(){
+                currentVideo = 'help2'; 
+            }
+            document.getElementById('help3').onplay = function(){
+                currentVideo = 'help3'; 
+                document.getElementById('arguehim').style.display = 'block';
+                 document.getElementById('askhelp').style.display = 'block';
+            }
+            document.getElementById('go').addEventListener('click',function(e){
+                 videoSelector('goaway');
+                 currentVideo='goaway';
+             })
+            document.getElementById('goaway').onplay = function(){
+                document.getElementById('goReselect').style.display ='block';
+            }
+            document.getElementById('goReselect').addEventListener('click',function(e){
+                 videoSelector('morning5');
+                 currentVideo='morning5';
+                document.getElementById('laugh').style.display = 'block';
+                 document.getElementById('help').style.display = 'block';
+                 document.getElementById('go').style.display = 'block';
+                 document.getElementById('goReselect').style.display = 'none';
+             })
+            
+             document.getElementById('laughReselect').addEventListener('click',function(e){
+                 videoSelector('morning5');
+                 currentVideo='morning5';
+                document.getElementById('laugh').style.display = 'block';
+                 document.getElementById('help').style.display = 'block';
+                 document.getElementById('go').style.display = 'block';
+                 document.getElementById('laughReselect').style.display = 'none';
+             })
+            
+            document.getElementById('arguehim').addEventListener('click',function(e){
+                videoSelector('argue');
+                currentVideo='argue';
+            })
+            document.getElementById('argue').onplay = function(){
+                document.getElementById('argueReselect').style.display ='block';
+            }
+             document.getElementById('argueReselect').addEventListener('click',function(e){
+                 videoSelector('help3');
+                 currentVideo='help3';
+                document.getElementById('arguehim').style.display = 'block';
+                 document.getElementById('askhelp').style.display = 'block';
+                 document.getElementById('argueReselect').style.display = 'none';
+             })
+            document.getElementById('askhelp').addEventListener('click',function(e){
+                videoSelector('ask1');
+                currentVideo='ask1';
+            })
+            document.getElementById('ask1').onplay = function(){
+                currentVideo='ask1';
+            }
+            document.getElementById('ask2').onplay = function(){
+                currentVideo='ask2';
+            }
+            document.getElementById('ask3').onplay = function(){
+                document.getElementById('goHome').style.display = 'block';
+                currentVideo='ask3';
+            }
+            
+             document.getElementById('goHome').addEventListener('click',function(e){
+                    window.location.href = 'http://www.savetheyouth-iteration3.tk/games/';
+            },false)
+            
+        </script>
+    </body>
+    <style>
+        html,i{
+            display: inline-block;
+        }
+        #go_home{
+            position: absolute;
+            top:5%;
+            left: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: rgba(244,244,244,0.4);
+            color: aliceblue;
+            font-size: 20px;
+        }
+        #go_home:hover{
+            position: absolute;
+            top:5%;
+            left: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+        }
+        #volume{
+            position: absolute;
+            top:5%;
+            right: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: rgba(244,244,244,0.4);
+            color: aliceblue;
+            font-size: 20px;
+        }
+         #volume:hover{
+            position: absolute;
+            top:5%;
+            right: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+        }
+        button{
+			cursor: pointer;
+            border: none;
+		}
+		button:hover{
+				cursor: pointer;
+		}
+		html,body{
+			display: flex;
+  		justify-content: center;
+  		align-items: center;
+			background-image: url('http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/rehan-mallick-5J1bHRX1fNw-unsplash.jpg');
+		}
+        #video_container{
+            position: relative;
+        }
+        #select{
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+        }
+        
+    #replay{
+        border-radius: 20px;padding: 15px; background-color: rgba(244,244,244,0.4);position: absolute;right: 45%;bottom: 5%;border: none;color: aliceblue;font-family: fantasy;font-size:15px;cursor: pointer;border: none;
+    }
+    #skip{
+        border-radius: 20px;padding: 15px; background-color: rgba(244,244,244,0.4);position: absolute;right: 5%;bottom: 5%;border: none;color: aliceblue;font-family: fantasy;font-size:15px;cursor: pointer;border: none;
+    }
+       
+        #skip:hover{
+            background-color: darkorange;
+        }
+        #replay:hover{
+            background-color: darkorange;
+        }
+        
+        #sit{
+            position:absolute;
+            top:68%;
+            left:22%;
+            width: 25%;
+            height:50px;
+            border:none;
+           background-color: transparent;
+        }
+        #notsit{
+            position: absolute;
+            top:82%;
+            left: 22%;
+            width: 25%;
+            height: 50px;
+            border:none;
+            background-color: transparent;
+        }
+        
+        #busReselect{
+            position: absolute;
+            bottom: 13%;
+            left: 23%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border:none;
+            background-color: transparent;
+        }
+        #laughReselect{
+            position: absolute;
+            bottom: 10%;
+            right: 31%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border:none;
+            background-color: transparent;
+        }
+        #goReselect{
+            position: absolute;
+            bottom: 10%;
+            right: 26%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border:none;
+            background-color: transparent;
+        }
+        #argueReselect{
+            position: absolute;
+            bottom: 10%;
+            right: 27%;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border:none;
+            background-color: transparent;
+        }
+        
+        #laugh{
+        position: absolute;
+        top: 32%;
+        left: 12%;
+        width: 42%;
+        height: 100px;
+        border: none;
+        background-color: transparent;
+        display: none;
+
+    }
+     #help{
+        position: absolute;
+        top: 51%;
+        left: 12%;
+        width: 42%;
+        height: 100px;
+         border: none;
+         background-color: transparent;
+          display: none;
+
+    }
+     #go{
+        position: absolute;
+        top: 70%;
+        left: 12%;
+        width: 42%;
+        height: 100px;
+        border: none;
+        background-color: transparent;
+          display: none;
+
+    }
+         #arguehim{
+        position: absolute;
+        top: 43%;
+        left: 15%;
+        width: 51%;
+        height: 120px;
+         border: none;
+         background-color: transparent;
+
+    }
+     #askhelp{
+        position: absolute;
+        top: 72%;
+        left: 15%;
+        width: 51%;
+        height: 120px;
+         border: none;
+         background-color: transparent;
+
+    }
+        #goHome{
+            position: absolute;
+            top:20%;
+            left:12%;
+            width: 300px;
+            height: 130px;
+            border: none;
+            background-color: transparent
+        }
+    </style>
+</html>
