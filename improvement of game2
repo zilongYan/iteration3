@@ -13,29 +13,40 @@
                 <source src="http://savetheyouth-iteration1.tk/wp-content/uploads/2019/09/After_School_Jamboree.mp3" type="audio/mpeg" />
             </audio>
         </div>
-        <video id="ReadyToPlay" autoplay loop playsinline>
-            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/ReadyToPlay.mp4" type=video/mp4>
+        
+        <video id="warning" autoplay loop playsinline>
+                <source id="warningvideo" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/warning.mp4#t=2,2.1" type=video/mp4>
+        </video>
+         <button id='exit'>
+            </button>
+            <button id='continue'>
+            </button>
+        
+        
+        
+        <video id="ReadyToPlay"  loop playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/ReadyToPlay.mp4" type=video/mp4>
         </video>
         <video id="Loading" style="display: none" playsinline>
-            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/Loading.mp4" type=video/mp4>
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/Loading.mp4" type=video/mp4>
         </video>
         <video id="Instruction" style="display: none" playsinline>
-            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/Instruction.mp4" type=video/mp4>
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/Instruction.mp4" type=video/mp4>
         </video>
         <video id="q1" style="display: none" playsinline>
-            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/q1.mp4" type=video/mp4>
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/q1.mp4" type=video/mp4>
         </video>
         <video id="q2" style="display: none" playsinline>
-            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/q2.mp4" type=video/mp4>
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/q2.mp4" type=video/mp4>
         </video>
         <video id="q3" style="display: none" playsinline>
-            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/q3.mp4" type=video/mp4>
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/q3.mp4" type=video/mp4>
         </video>
         <video id="q4" style="display: none" playsinline>
-            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/q4.mp4" type=video/mp4>
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/q4.mp4" type=video/mp4>
         </video>
         <video id="q5" style="display: none" playsinline>
-            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/q5.mp4" type=video/mp4>
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/q5.mp4" type=video/mp4>
         </video>
         <video id="c1" style="display: none" playsinline>
             <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/c1.mp4" type=video/mp4>
@@ -54,23 +65,23 @@
         </video>
 
         <video id="wrong" style="display: none" playsinline>
-            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/wrong.mp4" type=video/mp4>
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/wrong.mp4" type=video/mp4>
         </video>
 
         <video id="e1" style="display: none" playsinline>
-            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/e1.mp4" type=video/mp4>
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/e1.mp4" type=video/mp4>
         </video>
 
         <video id="e2" style="display: none" playsinline>
-            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/e2.mp4" type=video/mp4>
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/e2.mp4" type=video/mp4>
         </video>
 
         <video id="e3" style="display: none" playsinline>
-            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/e3.mp4" type=video/mp4>
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/e3.mp4" type=video/mp4>
         </video>
 
         <div id="playButton">
-            <button id="play"></button>
+            <button id="play" style="display: none"></button>
         </div>
         <div id="goButton">
             <button id="go"></button>
@@ -101,16 +112,19 @@
             <button id="q5no"></button>
         </div>
         <div>
-            <button id="musicControl"> <span><i class='fas fa-volume-up' id='musicIcon'></i></span></button>
+         <button id="go_home"><span><i  class="fa fa-home" aria-hidden="true" ></i></span></button>
         </div>
-        <div>
-            <button id="backHome" onclick="window.location.href='http://savetheyouth-iteration3.tk/games'"> <span><i class='fas fa-arrow-left'></i></span></button>
-        </div>
+                <button id='volume'>
+                    <span><i id="off" class="fa fa-volume-up" aria-hidden="true" ></i></span>
+                </button>
+        
+        
     </div>
     <script type="text/javascript">
-        audio1.volume = 0.4;
-        var audio = document.getElementById('audio1');
+        var music =document.getElementById('audio1');
+        music.volume = 0.2;
         var audioPlay = true;
+        var isPlaying = false;
         var musicControl = document.getElementById('musicControl');
         var playGame = document.getElementById('play');
         var ReadyToPlay = document.getElementById('ReadyToPlay');
@@ -150,20 +164,18 @@
 
         var score = 0;
         var videoNumber = 1;
+        
+        document.getElementById('continue').addEventListener('click',function(e){
+                    document.getElementById('warning').style.display = 'none';
+                    document.getElementById('exit').style.display = 'none';
+                    document.getElementById('ReadyToPlay').style.display ='block';
+                    document.getElementById('play').style.display ='block';
+                    document.getElementById('ReadyToPlay').play();
+            },false)
 
-        musicControl.addEventListener("click", function(event) {
-            if (!audioPlay) {
-                audio.play();
-                audioPlay = true;
-                icon.setAttribute('class', 'fas fa-volume-up');
-            } else {
-                audio.pause();
-                audioPlay = false;
-                icon.setAttribute('class', 'fas fa-volume-mute');
-            }
-
-        }, false)
-
+         document.getElementById('exit').addEventListener('click',function(e){
+                    window.location.href = 'http://www.savetheyouth-iteration3.tk/games/';
+            },false)
         playGame.addEventListener("click", function(event) {
             ReadyToPlay.style.display = 'none';
             Loading.style.display = 'block';
@@ -439,6 +451,26 @@
 
             }
         };
+         document.getElementById('go_home').addEventListener('click',function(e){
+                    window.location.href = 'http://www.savetheyouth-iteration3.tk/games/';
+            },false)
+            music.volume = 0.2;
+            document.getElementById('volume').addEventListener('click',function(e){
+                if(isPlaying){
+                    music.pause();
+                    document.getElementById('off').setAttribute('class',"fa fa-volume-off");
+                }
+                else{
+                    music.play();
+                    document.getElementById('off').setAttribute('class',"fa fa-volume-up");
+                }
+            },false)
+            music.onplaying =function(){
+                isPlaying = true;
+            }
+            music.onpause =function(){
+                isPlaying = false;
+            }
     </script>
 </body>
 <style>
@@ -451,7 +483,7 @@
     }
 
 
-    video{
+    html,video{
       width:100%;
     }
     html,
@@ -467,6 +499,54 @@
         display: table;
         width: auto;
     }
+    #go_home{
+            position: absolute;
+            top:5%;
+            left: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: rgba(244,244,244,0.4);
+            color: aliceblue;
+            font-size: 20px;
+        }
+        #go_home:hover{
+            position: absolute;
+            top:5%;
+            left: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+        }
+        #volume{
+            position: absolute;
+            top:5%;
+            right: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: rgba(244,244,244,0.4);
+            color: aliceblue;
+            font-size: 20px;
+        }
+         #volume:hover{
+            position: absolute;
+            top:5%;
+            right: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+        }
 
     #play {
         position: absolute;
@@ -620,6 +700,24 @@
         background-color: transparent;
         font-size: 30px;
     }
+    #exit{
+            position: absolute;
+            height: 80px;
+            width: 160px;
+            bottom: 5%;
+            left:12%;
+            background-color: transparent;
+            border: none;
+        }
+    #continue{
+            position: absolute;
+            height: 80px;
+            width: 160px;
+            bottom:5%;
+            right:12%;
+            background-color: transparent;
+            border: none;
+        }
 </style>
 
 </html>
