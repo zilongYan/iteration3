@@ -1,0 +1,239 @@
+<?php /* Template Name: Game4 */ ?>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="video_container">
+        <video id="video1" autoplay loop playsinline>
+            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/G1.mp4" type=video/mp4>
+        </video>
+        <div id="playpause"></div>
+        <div id="button_layer">
+            <button id="go_back"><span><i class="fa fa-arrow-left" aria-hidden="true" ></i></span> Back</button>
+            <button id="go_next"><span><i class="fa fa-arrow-right" aria-hidden="true"></i></span>Next</button>
+            <button id="replay"><span><i class="fa fa-undo" aria-hidden="true"></i></span> Replay</button>
+        </div>
+        <div id="playButton">
+          <button id="play"></button>
+        </div> 
+        <div>
+            <button id="go_home"><span><i class="fa fa-home" aria-hidden="true" ></i></span></button>
+        </div>
+    </div>
+
+    <script>
+        var video = 'http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/G';
+        var videoNumber = 1;
+        var videocontainer = document.getElementById('video1');
+        var videosource = document.getElementById('mp4video');
+        var go_next = document.getElementById('go_next');
+        var go_back = document.getElementById('go_back');
+        var playGame = document.getElementById('play');
+        var go_home = document.getElementById('go_home');
+        
+        go_home.addEventListener("click",function(event){
+           window.location.href = 'http://savetheyouth-iteration3.tk/games/';
+        },false)
+        
+        
+        
+        
+        go_next.addEventListener("click", function(event) {
+        videoNumber = videoNumber + 1;
+            if(videoNumber == 9){
+                go_next.style.display = 'none';
+            }
+            else{
+                go_next.style.display = 'block';
+            }
+//        document.getElementById('button_layer').style.display = 'none' ;
+        videosource.setAttribute('src', video + videoNumber + '.mp4');
+        videocontainer.load();
+        videocontainer.play();
+}, false);
+        
+        go_back.addEventListener("click", function(event) {
+        videoNumber = videoNumber - 1;
+            if(videoNumber == 1){
+                document.getElementById('button_layer').style.display='none';
+                playGame.style.display='block';
+            }
+            if(videoNumber != 9){
+                go_next.style.display = 'block';
+            }
+//        document.getElementById('button_layer').style.display = 'none' ;
+        videosource.setAttribute('src', video + videoNumber + '.mp4');
+        videocontainer.load();
+        videocontainer.play();
+}, false);
+     
+        playGame.addEventListener("click",function(event){
+            playGame.style.display = 'none';
+            document.getElementById('button_layer').style.display = 'block';
+            videoNumber = videoNumber + 1;
+            videosource.setAttribute('src', video + videoNumber + '.mp4');
+            videocontainer.load();
+            videocontainer.play(); 
+        },false);
+        
+        document.getElementById('replay').addEventListener("click", function(event) {
+        videocontainer.load();
+        videocontainer.play();
+}, false);
+        
+        videocontainer.addEventListener("",function(event){
+            if(videoNumber==1){
+                go_back.style.display='none';
+            }
+        },false);
+    </script>
+    <style>
+        button {
+            cursor: pointer;
+        }
+        
+        button:hover {
+            cursor: pointer;
+        }
+        
+        html,
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/rehan-mallick-5J1bHRX1fNw-unsplash.jpg');
+        }
+        
+        video {
+            width: 100%;
+        }
+        #go_home{
+            position: absolute;
+            bottom:45%;
+            right: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+        }
+        
+        #play{
+            position: absolute;
+            right:3%;
+            bottom: 4%;
+            width:250px;
+            height: 150px;
+            background-color: transparent;
+            border:none;
+    
+        }
+        #button_layer{
+            display: none;
+        }
+        
+        #video_container{
+        position: relative;
+        display: table;
+        width: auto;
+    }
+        #go_back {
+            border-radius: 20px;
+            padding: 15px;
+            background-color: darkorange;
+            position: absolute;
+            left: 5%;
+            bottom: 5%;
+            border: none;
+            color: aliceblue;
+            font-family: fantasy;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        #replay {
+            border-radius: 20px;
+            padding: 15px;
+            background-color: darkorange;
+            position: absolute;
+            right: 45%;
+            bottom: 5%;
+            border: none;
+            color: aliceblue;
+            font-family: fantasy;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        #go_next {
+            border-radius: 20px;
+            padding: 15px;
+            background-color: darkorange;
+            position: absolute;
+            right: 5%;
+            bottom: 5%;
+            border: none;
+            color: aliceblue;
+            font-family: fantasy;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+        }
+        
+/*
+        #play {
+            width: 20%;
+            height: 20%;
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+            font-size: 40px;
+            background-color: transparent;
+            color: transparent;
+            border: none;
+        }
+        
+        #play:hover {
+            width: 20%;
+            height: 20%;
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+            font-size: 40px;
+            background-color: darkorange;
+            color: white;
+            border: none;
+        }
+        
+*/
+        #replay:hover {
+            background-color: darkgreen;
+            transition: 0.5s;
+        }
+        
+        #go_next:hover {
+            background-color: darkgreen;
+            transition: 0.5s;
+        }
+        
+        #go_back:hover {
+            background-color: darkgreen;
+            transition: 0.5s;
+        }
+    </style>
+</body>
+
+</html>
