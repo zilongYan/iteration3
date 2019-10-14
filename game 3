@@ -1,0 +1,253 @@
+<?php /* Template Name: Game3 */ ?>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="video_container" class="container">
+
+        <div id="audio_container">
+            <audio id="audio1" autoplay="autoplay" playsinline>
+                <source src="http://savetheyouth-iteration1.tk/wp-content/uploads/2019/09/After_School_Jamboree.mp3" type="audio/mpeg" />
+            </audio>
+        </div>
+        <video id="warning" autoplay loop playsinline>
+            <source id="warningvideo" src="http://savetheyouth.tk/wp-content/uploads/2019/10/warning.mp4#t=2,2.1" type=video/mp4>
+        </video>
+        <button id='exit'>
+        </button>
+        <button id='continue1'>
+        </button>
+        <div>
+            <button id="go_home"><span><i  class="fa fa-home" aria-hidden="true" ></i></span></button>
+        </div>
+        <button id='volume'>
+            <span><i id="off" class="fa fa-volume-up" aria-hidden="true" ></i></span>
+        </button>
+        <video id="ReadyToPlay" autoplay loop playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-start.mp4" type=video/mp4>
+        </video>
+        <div id="playButton">
+            <button id="play" style="display: none"></button>
+        </div>
+        <video id="SelectChar" style="display: none" playsinline>
+            <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-choose-char.mp4" type=video/mp4>
+        </video>
+        <video id="Loading" style="display: none" playsinline>
+            <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-loading.mp4" type=video/mp4>
+        </video>
+        <div id="chooseChar" style="display: none">
+            <button id="selecteleder">
+            </button>
+            <button id="selectyounger">
+            </button>
+        </div>
+    </div>
+    <script>
+        var music = document.getElementById('audio1');
+        music.volume = 0.2;
+        var isPlaying = false;
+        var ReadyToPlay = document.getElementById('ReadyToPlay');
+        var SelectChar = document.getElementById('SelectChar');
+        var Loading = document.getElementById('Loading');
+        var playGame = document.getElementById('play');
+        var chooseChar = document.getElementById('chooseChar');
+        var selectelder = document.getElementById('selecteleder');
+        var selectyounger = document.getElementById('selectyounger');
+        var selectChar = document.getElementById('SelectChar');
+
+        document.getElementById('go_home').addEventListener('click', function(e) {
+            window.location.href = 'http://www.savetheyouth.tk/games/';
+        }, false)
+        music.volume = 0.2;
+        document.getElementById('volume').addEventListener('click', function(e) {
+            if (isPlaying) {
+                music.pause();
+                document.getElementById('off').setAttribute('class', "fa fa-volume-off");
+            } else {
+                music.play();
+                document.getElementById('off').setAttribute('class', "fa fa-volume-up");
+            }
+        }, false)
+        music.onplaying = function() {
+            isPlaying = true;
+        }
+        music.onpause = function() {
+            isPlaying = false;
+        }
+
+        document.getElementById('continue1').addEventListener('click', function(e) {
+            document.getElementById('warning').style.display = 'none';
+            document.getElementById('exit').style.display = 'none';
+            document.getElementById('continue1').style.display = 'none';
+            document.getElementById('ReadyToPlay').style.display = 'block';
+            document.getElementById('play').style.display = 'block';
+            document.getElementById('ReadyToPlay').play();
+        }, false)
+
+        document.getElementById('exit').addEventListener('click', function(e) {
+            window.location.href = 'http://www.savetheyouth.tk/games/';
+        }, false)
+
+        playGame.addEventListener("click", function(event) {
+            ReadyToPlay.style.display = 'none';
+            Loading.style.display = 'block';
+            Loading.play();
+            playGame.style.display = 'none'
+        }, false);
+
+        Loading.onended = function() {
+            Loading.style.display = 'none';
+            selectChar.style.display = 'block';
+            selectChar.play();
+            chooseChar.style.display = 'block';
+            //            v1.style.display = 'block';
+            //            v1.play();
+
+        }
+        selectelder.addEventListener('click', function(e) {
+            window.location.href = 'http://savetheyouth.tk/game-03-elder/';
+        }, false)
+        selectyounger.addEventListener('click', function(e) {
+            window.location.href = 'http://savetheyouth.tk/game-03-younger/';
+        }, false)
+        
+    </script>
+</body>
+<style>
+    button {
+        cursor: pointer;
+    }
+    
+    button:hover {
+        cursor: pointer;
+    }
+    
+    html,
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('http://savetheyouth.tk/wp-content/uploads/2019/09/rehan-mallick-5J1bHRX1fNw-unsplash.jpg');
+    }
+    
+    html,
+    video {
+        width: 100%;
+    }
+    
+    #go_home{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 20px;
+            border:none;
+/*            background-color: rgba(244,244,244,0.4);*/
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+            z-index: 9999;
+        
+        }
+/*
+        #go_home:hover{
+            position: absolute;
+            top:5%;
+            left: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+        }
+*/
+        #volume{
+            position: absolute;
+            top:0;
+            right:0;
+            width: 50px;
+            height: 50px;
+            border-radius: 20px;
+            border:none;
+            /*            background-color: rgba(244,244,244,0.4);*/
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+            z-index: 9999;
+        }
+/*
+         #volume:hover{
+            position: absolute;
+            top:5%;
+            right: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+        }
+*/
+    #video_container {
+        position: relative;
+    }
+    
+    #play {
+        position: absolute;
+        right: 3%;
+        bottom: 4%;
+        width: 210px;
+        height: 80px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #exit {
+        position: absolute;
+        height: 80px;
+        width: 160px;
+        bottom: 5%;
+        left: 12%;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #continue1 {
+        position: absolute;
+        height: 80px;
+        width: 160px;
+        bottom: 5%;
+        right: 12%;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #selecteleder {
+        position: absolute;
+        left: 17%;
+        bottom: 1%;
+        width: 210px;
+        height: 210px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #selectyounger {
+        position: absolute;
+        right: 17%;
+        bottom: 1%;
+        width: 210px;
+        height: 210px;
+        background-color: transparent;
+        border: none;
+    }
+</style>
+
+</html>
