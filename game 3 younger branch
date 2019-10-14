@@ -1,0 +1,501 @@
+<?php /* Template Name: Game3-younger */ ?>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="video_container" class="container">
+    <div id="audio_container">
+        <audio id="audio1" autoplay="autoplay" playsinline>
+            <source src="http://savetheyouth-iteration1.tk/wp-content/uploads/2019/09/After_School_Jamboree.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+    <div>
+        <button id="go_home"><span><i  class="fa fa-home" aria-hidden="true" ></i></span></button>
+    </div>
+    <button id='volume'>
+        <span><i id="off" class="fa fa-volume-up" aria-hidden="true" ></i></span>
+    </button>
+
+    <video id="game3-younger-select1" autoplay playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-select1.mp4" type=video/mp4>
+    </video>
+    <video id="game3-younger-reselect1" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-reselect1.mp4" type=video/mp4>
+    </video>
+    <video id="game3-younger-select1-1" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-select1-1.mp4" type=video/mp4>
+    </video>
+    <video id="game3-younger-goshopping" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-goshopping.mp4" type=video/mp4>
+    </video>
+    <video id="game3-younger-choose-toy" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-choose-toy.mp4" type=video/mp4>
+    </video>
+    <video id="game3-younger-choose-dragon" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-choose-dragon.mp4" type=video/mp4>
+    </video>
+    <video id="game3-younger-choose-bear" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-choose-bear.mp4" type=video/mp4>
+    </video>
+    <video id="game3-younger-gohome" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-gohome.mp4#t=1.8,4" type=video/mp4>
+    </video>
+    <video id="game3-younger-select2" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-select2.mp4" type=video/mp4>
+    </video>
+    <video id="game3-younger-reselect2" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-reselect2.mp4" type=video/mp4>
+    </video>
+    <video id="game3-younger-select2-1" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-select2-1.mp4" type=video/mp4>
+    </video>
+    <video id="game3-younger-select3" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-select3.mp4" type=video/mp4>
+    </video>
+    <video id="game3-younger-playing-chest" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-playing-chest.mp4" type=video/mp4>
+    </video>
+    <video id="game3-younger-reselect3" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-reselect3.mp4" type=video/mp4>
+    </video>
+    <video id="game3-younger-select3-1" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-select3-1.mp4" type=video/mp4>
+    </video>
+    <video id="game3-younger-select3-2" style="display: none" playsinline>
+        <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/game3-younger-select3-2.mp4" type=video/mp4>
+    </video>
+
+    <div id="younger-select1" style="display: none">
+        <button id="stick"></button>
+        <button id="change"></button>
+    </div>
+
+    <div id="younger-reselect" style="display: none">
+        <button id="younger-reselect-button"></button>
+    </div>
+
+    <div id="younger-choosetoyButton" style="display: none">
+        <button id="younger-bear"></button>
+        <button id="younger-dragon"></button>
+    </div>
+
+    <div id="younger-toyexchange" style="display: none">
+        <button id="against"></button>
+        <button id="younger-exchange"></button>
+    </div>
+
+    <div id="younger-toyreselection" style="display: none">
+        <button id="younger-reselecttoy"></button>
+    </div>
+
+    <div id="wingameselection" style="display: none">
+        <button id="laugh"></button>
+        <button id="encourage"></button>
+    </div>
+
+    <div id="younger-finalreselection" style="display: none">
+        <button id="younger-finalreselcet"></button>
+    </div>
+        <button id="playagain" style="display: none"><span><i class="fa fa-undo" ></i></span>Play Again</button>
+        <button id="exit1" style="display: none"><span><i  class="fa fa-arrow-left" aria-hidden="true" ></i></span>Exit</button>
+
+    <script>
+        var music = document.getElementById('audio1');
+        music.volume = 0.2;
+        var isPlaying = false;
+        document.getElementById('go_home').addEventListener('click', function(e) {
+            window.location.href = 'http://www.savetheyouth.tk/games/';
+        }, false)
+        music.volume = 0.2;
+        document.getElementById('volume').addEventListener('click', function(e) {
+            if (isPlaying) {
+                music.pause();
+                document.getElementById('off').setAttribute('class', "fa fa-volume-off");
+            } else {
+                music.play();
+                document.getElementById('off').setAttribute('class', "fa fa-volume-up");
+            }
+        }, false)
+        music.onplaying = function() {
+            isPlaying = true;
+        }
+        music.onpause = function() {
+            isPlaying = false;
+        }
+        document.getElementById('game3-younger-select1').onended = function() {
+            document.getElementById('younger-select1').style.display = 'block'
+        }
+        document.getElementById('stick').addEventListener('click', function(event) {
+            document.getElementById('game3-younger-reselect1').style.display = 'none';
+            document.getElementById('game3-younger-select1').style.display = 'none';
+            document.getElementById('younger-select1').style.display = 'none';
+            document.getElementById('game3-younger-goshopping').style.display = 'block';
+            document.getElementById('game3-younger-goshopping').play();
+        }, false)
+
+        document.getElementById('change').addEventListener('click', function(event) {
+            document.getElementById('game3-younger-reselect1').style.display = 'none';
+            document.getElementById('game3-younger-select1').style.display = 'none';
+            document.getElementById('younger-select1').style.display = 'none';
+            document.getElementById('game3-younger-select1-1').style.display = 'block';
+            document.getElementById('game3-younger-select1-1').play();
+        }, false)
+
+        document.getElementById('game3-younger-select1-1').onended = function() {
+            document.getElementById('younger-reselect').style.display = 'block';
+        }
+
+        document.getElementById('younger-reselect-button').addEventListener('click', function(event) {
+            document.getElementById('game3-younger-select1-1').style.display = 'none';
+            document.getElementById('younger-reselect').style.display = 'none';
+            document.getElementById('younger-select1').style.display = 'block'
+            document.getElementById('game3-younger-reselect1').style.display = 'block';
+            document.getElementById('game3-younger-reselect1').play();
+        }, false)
+
+        document.getElementById('game3-younger-goshopping').onended = function() {
+            document.getElementById('game3-younger-goshopping').style.display = 'none';
+            document.getElementById('game3-younger-choose-toy').style.display = 'block';
+            document.getElementById('game3-younger-choose-toy').play();
+            document.getElementById('younger-choosetoyButton').style.display = 'block';
+
+        }
+
+        document.getElementById('younger-bear').addEventListener('click', function(event) {
+            document.getElementById('game3-younger-choose-toy').style.display = 'none';
+            document.getElementById('younger-choosetoyButton').style.display = 'none';
+            document.getElementById('game3-younger-choose-bear').style.display = 'block';
+            document.getElementById('game3-younger-choose-bear').play();
+        }, false)
+        document.getElementById('younger-dragon').addEventListener('click', function(event) {
+            document.getElementById('game3-younger-choose-toy').style.display = 'none';
+            document.getElementById('younger-choosetoyButton').style.display = 'none';
+            document.getElementById('game3-younger-choose-dragon').style.display = 'block';
+            document.getElementById('game3-younger-choose-dragon').play();
+        }, false)
+
+        document.getElementById('game3-younger-choose-bear').onended = function() {
+            document.getElementById('game3-younger-choose-bear').style.display = 'none';
+            document.getElementById('game3-younger-gohome').style.display = 'block';
+            document.getElementById('game3-younger-gohome').play();
+        }
+
+        document.getElementById('game3-younger-choose-dragon').onended = function() {
+            document.getElementById('game3-younger-choose-dragon').style.display = 'none';
+            document.getElementById('game3-younger-gohome').style.display = 'block';
+            document.getElementById('game3-younger-gohome').play();
+        }
+
+        document.getElementById('game3-younger-gohome').onended = function() {
+            document.getElementById('game3-younger-gohome').style.display = 'none';
+            document.getElementById('game3-younger-select2').style.display = 'block';
+            document.getElementById('game3-younger-select2').play();
+        }
+
+        document.getElementById('game3-younger-select2').onended = function() {
+            document.getElementById('younger-toyexchange').style.display = 'block';
+        }
+        document.getElementById('against').addEventListener('click', function(event) {
+            document.getElementById('game3-younger-reselect2').style.display = 'none'
+            document.getElementById('younger-toyreselection').style.display = 'none';
+            document.getElementById('younger-toyexchange').style.display = 'none';
+            document.getElementById('game3-younger-select2').style.display = 'none';
+            document.getElementById('game3-younger-select2-1').style.display = 'block';
+            document.getElementById('game3-younger-select2-1').play();
+        }, false)
+
+        document.getElementById('younger-exchange').addEventListener('click', function(event) {
+            document.getElementById('game3-younger-reselect2').style.display = 'none';
+            document.getElementById('younger-toyexchange').style.display = 'none';
+            document.getElementById('game3-younger-select2').style.display = 'none';
+            document.getElementById('game3-younger-playing-chest').style.display = 'block';
+            document.getElementById('game3-younger-playing-chest').play();
+        }, false)
+
+        document.getElementById('game3-younger-select2-1').onended = function() {
+            document.getElementById('younger-toyreselection').style.display = 'block';
+        }
+
+        document.getElementById('younger-reselecttoy').addEventListener('click', function(event) {
+            document.getElementById('game3-younger-select2-1').style.display = 'none';
+            document.getElementById('younger-toyreselection').style.display = 'none';
+            document.getElementById('game3-younger-reselect2').style.display = 'block';
+            document.getElementById('younger-toyexchange').style.display = 'block';
+            document.getElementById('game3-younger-reselect2').play();
+
+        }, false)
+
+        document.getElementById('game3-younger-playing-chest').onended = function() {
+            document.getElementById('game3-younger-playing-chest').style.display = 'none';
+            document.getElementById('game3-younger-select3').style.display = 'block';
+            document.getElementById('game3-younger-select3').play();
+        }
+        document.getElementById('game3-younger-select3').onended = function() {
+            document.getElementById('wingameselection').style.display = 'block';
+        }
+        document.getElementById('laugh').addEventListener('click', function(event) {
+            document.getElementById('game3-younger-reselect3').style.display = 'none';
+            document.getElementById('younger-finalreselection').style.display = 'none';
+            document.getElementById('game3-younger-select3').style.display = 'none';
+            document.getElementById('wingameselection').style.display = 'none';
+            document.getElementById('game3-younger-select3-1').style.display = 'block';
+            document.getElementById('game3-younger-select3-1').play();
+            document.getElementById('younger-finalreselection').style.display = 'block';
+        }, false)
+        document.getElementById('game3-younger-select3-1').onended = function() {
+            document.getElementById('younger-finalreselection').style.display = 'block';
+        };
+        document.getElementById('younger-finalreselcet').addEventListener('click', function(event) {
+            document.getElementById('game3-younger-select3-1').style.display = 'none';
+            document.getElementById('younger-finalreselection').style.display = 'none';
+            document.getElementById('game3-younger-reselect3').style.display = 'block';
+            document.getElementById('game3-younger-reselect3').play();
+            document.getElementById('wingameselection').style.display = 'block';
+        }, false)
+        document.getElementById('encourage').addEventListener('click', function() {
+            document.getElementById('game3-younger-reselect3').style.display = 'none';
+            document.getElementById('younger-finalreselection').style.display = 'none';
+            document.getElementById('game3-younger-select3').style.display = 'none';
+            document.getElementById('wingameselection').style.display = 'none';
+            document.getElementById('game3-younger-select3-2').style.display = 'block';
+            document.getElementById('game3-younger-select3-2').play();
+        })
+        document.getElementById('game3-younger-select3-2').onended = function(){
+            document.getElementById('playagain').style.display = 'block';
+            document.getElementById('exit1').style.display = 'block';
+        }
+         document.getElementById('playagain').addEventListener('click',function(e){
+                window.location.href = 'http://www.savetheyouth.tk/game-03/';
+            },false)
+            document.getElementById('exit1').addEventListener('click',function(e){
+                window.location.href = 'http://www.savetheyouth.tk/games/';
+            },false)
+    </script>
+    </div>
+</body>
+<style>
+    button {
+        cursor: pointer;
+    }
+    
+    button:hover {
+        cursor: pointer;
+    }
+    
+    html,
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('http://savetheyouth.tk/wp-content/uploads/2019/09/rehan-mallick-5J1bHRX1fNw-unsplash.jpg');
+    }
+    
+    html,
+    video {
+        width: 100%;
+    }
+    
+    #go_home{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 20px;
+            border:none;
+/*            background-color: rgba(244,244,244,0.4);*/
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+        z-index: 9999;
+        }
+/*
+        #go_home:hover{
+            position: absolute;
+            top:5%;
+            left: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+        }
+*/
+        #volume{
+            position: absolute;
+            top:0;
+            right:0;
+            width: 50px;
+            height: 50px;
+            border-radius: 20px;
+            border:none;
+            /*            background-color: rgba(244,244,244,0.4);*/
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+            z-index: 9999;
+        }
+/*
+         #volume:hover{
+            position: absolute;
+            top:5%;
+            right: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+        }
+*/
+    
+    #video_container {
+        position: relative;
+    }
+    
+    #younger-bear {
+        position: absolute;
+        left: 17%;
+        bottom: 1%;
+        width: 210px;
+        height: 210px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #younger-dragon {
+        position: absolute;
+        right: 17%;
+        bottom: 1%;
+        width: 210px;
+        height: 210px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #younger-reselecttoy {
+        position: absolute;
+        right: 20%;
+        bottom: 1%;
+        width: 210px;
+        height: 210px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #against {
+        position: absolute;
+        right: 20%;
+        bottom: 27%;
+        width: 400px;
+        height: 80px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #younger-exchange {
+        position: absolute;
+        right: 20%;
+        bottom: 12%;
+        width: 400px;
+        height: 80px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #younger-finalreselcet {
+        position: absolute;
+        right: 2%;
+        bottom: 1%;
+        width: 210px;
+        height: 210px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #stick {
+        position: absolute;
+        right: 3%;
+        bottom: 35%;
+        width: 400px;
+        height: 80px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #change {
+        position: absolute;
+        right: 3%;
+        bottom: 20%;
+        width: 400px;
+        height: 80px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #younger-reselect-button {
+        position: absolute;
+        right: 17%;
+        bottom: 1%;
+        width: 210px;
+        height: 210px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #laugh {
+        position: absolute;
+        right: 22%;
+        bottom: 26%;
+        width: 400px;
+        height: 80px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #encourage {
+        position: absolute;
+        right: 22%;
+        bottom: 11%;
+        width: 400px;
+        height: 80px;
+        background-color: transparent;
+        border: none;
+    }
+    #playagain{
+           border-radius: 20px;
+            padding: 15px;
+            background-color: darkorange;
+            position: absolute;
+            right: 5%;
+            bottom: 5%;
+            border: none;
+            color: aliceblue;
+            font-family: fantasy;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+        }
+        #exit1{
+            border-radius: 20px;
+            padding: 15px;
+            background-color: darkorange;
+            position: absolute;
+            left: 5%;
+            bottom: 5%;
+            border: none;
+            color: aliceblue;
+            font-family: fantasy;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+        }
+</style>
+
+</html>
