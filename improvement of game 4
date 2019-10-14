@@ -7,9 +7,14 @@
 
 <body>
     <div id="video_container">
-        <video id="video1" autoplay loop playsinline>
-            <source id="mp4video" src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/G1.mp4" type=video/mp4>
+        <video id="warning" autoplay loop playsinline>
+                <source id="warningvideo" src="http://savetheyouth.tk/wp-content/uploads/2019/10/warning.mp4#t=2,2.1" type=video/mp4>
+            </video>
+        <video id="video1"  playsinline style="display: none">
+            <source id="mp4video" src="http://savetheyouth.tk/wp-content/uploads/2019/10/G1.mp4" type=video/mp4>
         </video>
+        <div id="audio_container"><audio id="audio1" autoplay="autoplay"><source src="http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/After_School_Jamboree.mp3" type="audio/mpeg" /></audio></div>
+            
         <div id="playpause"></div>
         <div id="button_layer">
             <button id="go_back"><span><i class="fa fa-arrow-left" aria-hidden="true" ></i></span> Back</button>
@@ -17,34 +22,75 @@
             <button id="replay"><span><i class="fa fa-undo" aria-hidden="true"></i></span> Replay</button>
         </div>
         <div id="playButton">
-          <button id="play"></button>
+          <button id="play" style="display: none"></button>
         </div> 
-        <div>
-            <button id="go_home"><span><i class="fa fa-home" aria-hidden="true" ></i></span></button>
+         <div>
+            <button id="go_home"><span><i  class="fa fa-home" aria-hidden="true" ></i></span></button>
         </div>
+                <button id='volume'>
+                    <span><i id="off" class="fa fa-volume-up" aria-hidden="true" ></i></span>
+                </button>
+        <button id='exit'>
+            </button>
+            <button id='continue'>
+            </button>
+        <button id="playagain" style="display: none"><span><i class="fa fa-undo" ></i></span>Play Again</button>
+        <button id="exit1" style="display: none"><span><i  class="fa fa-arrow-left" aria-hidden="true" ></i></span>Exit</button>
     </div>
 
     <script>
-        var video = 'http://savetheyouth-iteration3.tk/wp-content/uploads/2019/10/G';
+        var video = 'http://savetheyouth.tk/wp-content/uploads/2019/10/G';
         var videoNumber = 1;
         var videocontainer = document.getElementById('video1');
         var videosource = document.getElementById('mp4video');
         var go_next = document.getElementById('go_next');
         var go_back = document.getElementById('go_back');
         var playGame = document.getElementById('play');
-        var go_home = document.getElementById('go_home');
+        var music =document.getElementById('audio1');
+        var isPlaying = false;
         
-        go_home.addEventListener("click",function(event){
-           window.location.href = 'http://savetheyouth-iteration3.tk/games/';
-        },false)
         
+        document.getElementById('exit').addEventListener('click',function(e){
+                    window.location.href = 'http://www.savetheyouth.tk/games/';
+            },false)
+            document.getElementById('continue').addEventListener('click',function(e){
+                    document.getElementById('warning').style.display = 'none';
+                    document.getElementById('exit').style.display = 'none';
+                document.getElementById('continue').style.display = 'none';
+                    document.getElementById('play').style.display = 'block';
+                    videocontainer.style.display ='block';
+                    videocontainer.play();
+            },false)
+        
+        document.getElementById('go_home').addEventListener('click',function(e){
+                    window.location.href = 'http://www.savetheyouth.tk/games/';
+            },false)
+            music.volume = 0.2;
+            document.getElementById('volume').addEventListener('click',function(e){
+                if(isPlaying){
+                    music.pause();
+                    document.getElementById('off').setAttribute('class',"fa fa-volume-off");
+                }
+                else{
+                    music.play();
+                    document.getElementById('off').setAttribute('class',"fa fa-volume-up");
+                }
+            },false)
+            music.onplaying =function(){
+                isPlaying = true;
+            }
+            music.onpause =function(){
+                isPlaying = false;
+            }
         
         
         
         go_next.addEventListener("click", function(event) {
         videoNumber = videoNumber + 1;
-            if(videoNumber == 9){
+            if(videoNumber == 10){
                 go_next.style.display = 'none';
+                document.getElementById('playagain').style.display = 'block';
+                document.getElementById('exit1').style.display = 'block';
             }
             else{
                 go_next.style.display = 'block';
@@ -61,7 +107,7 @@
                 document.getElementById('button_layer').style.display='none';
                 playGame.style.display='block';
             }
-            if(videoNumber != 9){
+            if(videoNumber != 10){
                 go_next.style.display = 'block';
             }
 //        document.getElementById('button_layer').style.display = 'none' ;
@@ -89,6 +135,13 @@
                 go_back.style.display='none';
             }
         },false);
+         document.getElementById('playagain').addEventListener('click',function(e){
+                window.location.href = 'http://www.savetheyouth.tk/game-04/';
+            },false)
+            document.getElementById('exit1').addEventListener('click',function(e){
+                window.location.href = 'http://www.savetheyouth.tk/games/';
+            },false)
+        
     </script>
     <style>
         button {
@@ -104,7 +157,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('http://savetheyouth-iteration3.tk/wp-content/uploads/2019/09/rehan-mallick-5J1bHRX1fNw-unsplash.jpg');
+            background-image: url('http://savetheyouth.tk/wp-content/uploads/2019/09/rehan-mallick-5J1bHRX1fNw-unsplash.jpg');
         }
         
         video {
@@ -219,19 +272,105 @@
         }
         
 */
-        #replay:hover {
-            background-color: darkgreen;
-            transition: 0.5s;
+        #go_home{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 20px;
+            border:none;
+/*            background-color: rgba(244,244,244,0.4);*/
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
         }
-        
-        #go_next:hover {
-            background-color: darkgreen;
-            transition: 0.5s;
+/*
+        #go_home:hover{
+            position: absolute;
+            top:5%;
+            left: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
         }
-        
-        #go_back:hover {
-            background-color: darkgreen;
-            transition: 0.5s;
+*/
+        #volume{
+            position: absolute;
+            top:0;
+            right:0;
+            width: 50px;
+            height: 50px;
+            border-radius: 20px;
+            border:none;
+            /*            background-color: rgba(244,244,244,0.4);*/
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+        }
+/*
+         #volume:hover{
+            position: absolute;
+            top:5%;
+            right: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:none;
+            background-color: darkorange;
+            color: aliceblue;
+            font-size: 20px;
+        }
+*/
+        #exit{
+            position: absolute;
+            height: 80px;
+            width: 160px;
+            bottom: 5%;
+            left:12%;
+            background-color: transparent;
+            border: none;
+        }
+        #continue{
+            position: absolute;
+            height: 80px;
+            width: 160px;
+            bottom:5%;
+            right:12%;
+            background-color: transparent;
+            border: none;
+        }
+         #playagain{
+           border-radius: 20px;
+            padding: 15px;
+            background-color: darkorange;
+            position: absolute;
+            right: 5%;
+            bottom: 5%;
+            border: none;
+            color: aliceblue;
+            font-family: fantasy;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+        }
+        #exit1{
+            border-radius: 20px;
+            padding: 15px;
+            background-color: darkorange;
+            position: absolute;
+            left: 5%;
+            bottom: 5%;
+            border: none;
+            color: aliceblue;
+            font-family: fantasy;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
         }
     </style>
 </body>
